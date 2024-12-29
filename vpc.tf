@@ -4,7 +4,7 @@ resource "aws_vpc" "main" {
   enable_dns_support   = true
 
   tags = {
-    name = var.project_name
+    Name = var.project_name
   }
 }
 

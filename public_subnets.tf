@@ -10,7 +10,7 @@ resource "aws_subnet" "public" {
   availability_zone = var.public_subnets[count.index].availability_zone
 
   tags = {
-    name = var.public_subnets[count.index].name
+    Name = var.public_subnets[count.index].name
   }
 }
 
@@ -18,7 +18,7 @@ resource "aws_route_table" "public_internet_access" {
   vpc_id = aws_vpc.main.id
 
   tags = {
-    name = "${var.project_name}-public-access"
+    Name = "${var.project_name}-public-access"
   }
 }
 
